@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function openPurchaseForm(product) {
-    fetch('/purchase-form.html')
+    fetch('../purchase-form.html')
         .then(response => response.text())
         .then(html => {
             document.body.insertAdjacentHTML('beforeend', html);
