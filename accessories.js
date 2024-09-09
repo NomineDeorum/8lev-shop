@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function openPurchaseForm(product) {
-    fetch('/purchase-form.html')
+    fetch('purchase-form.html')
         .then(response => response.text())
         .then(html => {
             document.body.insertAdjacentHTML('beforeend', html);
@@ -23,6 +23,10 @@ function openPurchaseForm(product) {
                 event.preventDefault();
                 sendEmail(this);
             });
+
+            document.getElementById('close-form').addEventListener('click', function() {
+                purchaseForm.remove();  
+            });
         });
 }
 
@@ -34,8 +38,9 @@ function centerForm(form) {
     form.style.backgroundColor = 'white';
     form.style.padding = '20px';
     form.style.zIndex = '1000';
+    form.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
 }
 
 function sendEmail(form) {
-    
+    // Implementación de envío de correo
 }
