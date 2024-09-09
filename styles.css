@@ -59,13 +59,18 @@ main {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .card img {
     width: 100%;
     height: 200px;
-    object-fit: cover;
+    object-fit: scale-down;
+    border: none;
+}
+
+img {
+    border: none; 
 }
 
 .card-content {
@@ -128,3 +133,62 @@ footer {
         margin-bottom: 20px; 
     }
 }
+
+#accessories-grid {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+.price {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+
+#purchase-form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+#purchase-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    max-width: 90%; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative; 
+}
+
+#purchase-form h2 {
+    margin-top: 0;
+}
+
+#purchase-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+#purchase-form input, #purchase-form select {
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+#purchase-form button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    width: 100%;
+}
+

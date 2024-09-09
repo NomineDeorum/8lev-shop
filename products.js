@@ -16,5 +16,4 @@ const products = [
     }
 ];
 
-
 window.sunStoreProducts = products;
