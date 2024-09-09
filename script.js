@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="card-content">
                         <h2>${product.category}</h2>
                         <p>${product.description}</p>
-                        <a href="/category/${product.category.toLowerCase()}" class="shop-now">Shop Now</a>
+                        <a href="category/${product.category.toLowerCase()}.html" class="shop-now">Shop Now</a>
                     </div>
                 </div>
             `;
@@ -22,9 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     subscribeBtn.addEventListener('click', function() {
-
         alert('Thank you for subscribing to my channel!');
-        
         window.open('https://www.youtube.com/@rohmo98', '_blank');
     });
 });
