@@ -5,6 +5,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 .container {
@@ -45,20 +46,20 @@ main {
 
 .grid {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap; 
     gap: 20px;
-    overflow-x: auto;
     padding-bottom: 20px;
+    overflow-x: hidden;
 }
 
 .card {
-    flex: 0 0 auto;
-    width: calc(33.333% - 14px);
+    flex: 1 1 calc(33.333% - 20px);
     min-width: 250px;
     border: 1px solid #e5e7eb;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; 
 }
 
 .card img {
@@ -98,7 +99,7 @@ h2 {
 footer {
     margin-top: 48px;
     padding: 24px 0;
-    border-top: 1px solid #e5e7eb;
+    border-top: 0px solid #e5e7eb;
     text-align: center;
 }
 
@@ -119,35 +120,11 @@ footer {
 
 @media (max-width: 768px) {
     .grid {
-        flex-wrap: wrap;
+        flex-direction: column;
     }
 
     .card {
         width: 100%;
+        margin-bottom: 20px; 
     }
-}
-
-
-#product-grid {
-    overflow-x: hidden;
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 1rem; 
-}
-
-
-.card {
-    flex: 1 1 calc(33.333% - 1rem); 
-    box-sizing: border-box;
-    margin-bottom: 1rem; 
-}
-
-img {
-    max-width: 100%; 
-    height: auto;
-}
-
-.card-content {
-    padding: 1rem;
-    text-align: center;
 }
